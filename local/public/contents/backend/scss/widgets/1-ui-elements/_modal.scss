@@ -1,0 +1,49 @@
+
+/*=================================
+    25.Modal CSS
+=================================*/
+
+.ap-modal p {
+    color: #606060;
+    line-height: 26px;
+    width: 100%;
+    text-align: justify;
+}
+
+.varying button {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.ap-example-row .row+.row {
+    margin-top: 1rem;
+}
+
+.ap-example-row .row>.col,
+.ap-example-row .row>[class^="col-"] {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #dbe5fd;
+    border: 1px solid #acc2f9;
+    opacity: .8
+}
+
+.ap-accordion .card-body {
+    color: #606060;
+    line-height: 26px;
+    width: 100%;
+    text-align: justify;
+}
+
+.ap-accordion .btn:focus {
+    box-shadow: inherit !important;
+    text-decoration: inherit;
+}
+
+.ap-accordion .btn-primary {
+    background: #6861CE !important;
+    border-color: #6861CE !important;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    margin-right: 15px;
+}

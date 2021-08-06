@@ -1,0 +1,172 @@
+
+/*=================================
+    11.Mailbox
+==================================*/
+
+.box-header>.fa,
+.box-header>.glyphicon,
+.box-header>.ion,
+.box-header .box-title {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1;
+}
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-header>.box-tools {
+    right: 10px;
+}
+
+
+/* Mailbox nav */
+
+.nav-mailbox li {
+    display: block;
+    width: 100%;
+}
+
+.nav-mailbox>li>a {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 3px solid transparent;
+    color: #444;
+}
+
+.nav-mailbox>li>a {
+    border-radius: 0;
+    border: 0;
+    color: #444;
+    padding: 12px 15px 13px 15px;
+    display: block;
+    background-color: transparent;
+}
+
+.nav-mailbox>li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.nav-mailbox li.active a {
+    color: #6861ce;
+    font-weight: 700;
+}
+
+.nav-mailbox>li>a>i {
+    padding-right: 5px;
+}
+
+.nav-mailbox>li>a:hover,
+.nav-mailbox>li>a:active,
+.nav-mailbox>li>a:focus {
+    text-decoration: none;
+    color: #6861ce;
+}
+
+.box-tools i {
+    color: #333;
+    font-size: 14px;
+}
+
+.mailbox-messages>.table {
+    margin: 0
+}
+
+.mailbox-messages>.table td {
+    padding: 14px 10px;
+    font-size: 13px
+}
+
+.mailbox-messages>.table td a {
+    color: #666f73;
+}
+
+.mailbox-messages>.table td a:hover {
+    color: #4e5558;
+}
+
+.mailbox-controls {
+    padding: 5px
+}
+
+.mailbox-controls.with-border {
+    border-bottom: 1px solid #f4f4f4
+}
+
+.mailbox-read-info {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 10px
+}
+
+.mailbox-read-info h3 {
+    font-size: 20px;
+    margin: 0
+}
+
+.mailbox-read-info h5 {
+    margin: 0;
+    padding: 5px 0 0 0
+}
+
+.mailbox-read-time {
+    color: #999;
+    font-size: 13px
+}
+
+.mailbox-read-message {
+    padding: 10px
+}
+
+.mailbox-attachments li {
+    float: left;
+    width: 225px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    list-style: none;
+}
+
+.mailbox-attachment-name {
+    font-weight: bold;
+    color: #666
+}
+
+.mailbox-attachment-icon,
+.mailbox-attachment-info,
+.mailbox-attachment-size {
+    display: block
+}
+
+.mailbox-attachment-info {
+    padding: 10px;
+    background: #f4f4f4
+}
+
+.mailbox-attachment-size {
+    color: #999;
+    font-size: 12px
+}
+
+.mailbox-attachment-icon {
+    text-align: center;
+    font-size: 65px;
+    color: #666;
+    padding: 20px 10px
+}
+
+.mailbox-attachment-icon.has-img {
+    padding: 0
+}
+
+.mailbox-attachment-icon.has-img>img {
+    max-width: 100%;
+    height: auto
+}
+
+.mailbox-controls .btn{
+    background: #ddd;
+}

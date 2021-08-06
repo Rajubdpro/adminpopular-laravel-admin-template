@@ -1,0 +1,356 @@
+/*=================================
+    20.Form-Elements CSS
+=================================*/
+
+.ap-sec-wrapper .hk-sec-label {
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.form-control-lg,
+.custom-select-lg {
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    height: calc(2.875rem + 4px) !important;
+}
+
+.ap-sec-wrapper h6 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.input-group .btn{
+    height: 100%;
+}
+
+
+
+/*Form*/
+
+.form-control,
+.dd-handle {
+    color: #324148;
+    border-width: 1px;
+    border-color: #eaecec;
+    padding: .375rem .75rem;
+    height: calc(2.25rem + 4px);
+}
+
+.form-control:focus,
+.dd-handle:focus {
+    box-shadow: none;
+    border-color: #6861ce;
+}
+
+.form-control.square-input,
+.square-input.dd-handle {
+    border-radius: 0;
+}
+
+.form-control:disabled,
+.dd-handle:disabled {
+    background-color: #fff;
+    border-color: #f5f5f6;
+    color: #c1c6c8;
+    opacity: 1;
+}
+
+.form-control[readonly],
+[readonly].dd-handle {
+    background-color: #fff;
+    border-color: #d6d9da;
+}
+
+.form-control.filled-input,
+.filled-input.dd-handle {
+    background: #f5f5f6;
+    border: none;
+}
+
+.form-control.filled-input:focus,
+.filled-input.dd-handle:focus {
+    background: #eaecec;
+    border: none;
+    box-shadow: none;
+}
+
+.form-control.filled-input:disabled,
+.filled-input.dd-handle:disabled {
+    background: rgba(245, 245, 246, 0.6);
+}
+
+.form-control.filled-input[readonly],
+.filled-input[readonly].dd-handle {
+    background-color: #d6d9da;
+}
+
+.form-control.outline-input,
+.outline-input.dd-handle {
+    background: transparent;
+}
+
+.form-control.transparent-input,
+.transparent-input.dd-handle {
+    background: transparent;
+    border: none;
+}
+
+.form-control.transparent-input:focus,
+.transparent-input.dd-handle:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.form-control.rounded-input,
+.rounded-input.dd-handle {
+    border-radius: 50px;
+}
+
+.form-control::-webkit-input-placeholder,
+.dd-handle::-webkit-input-placeholder {
+    color: #c1c6c8;
+}
+
+.form-control:-moz-placeholder,
+.dd-handle:-moz-placeholder {
+    color: #c1c6c8;
+}
+
+.form-control::-moz-placeholder,
+.dd-handle::-moz-placeholder {
+    color: #c1c6c8;
+}
+
+.form-control:-ms-input-placeholder,
+.dd-handle:-ms-input-placeholder {
+    color: #c1c6c8;
+}
+
+.form-control-lg,
+.custom-select-lg {
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    height: calc(2.875rem + 4px);
+}
+
+.form-control-sm,
+.custom-select-sm {
+    font-size: 0.875rem;
+    padding: .25rem .5rem;
+    height: calc(1.8125rem + 4px);
+}
+
+.custom-select {
+    padding-right: 1.75rem;
+}
+
+
+/*Inut group*/
+
+.input-group-prepend {
+    margin-right: -2px;
+}
+
+.input-group-append {
+    margin-left: -2px;
+}
+
+.input-group-append .btn+.btn,
+.input-group-append .btn+.input-group-text,
+.input-group-append .input-group-text+.btn,
+.input-group-append .input-group-text+.input-group-text,
+.input-group-prepend .btn+.btn,
+.input-group-prepend .btn+.input-group-text,
+.input-group-prepend .input-group-text+.btn,
+.input-group-prepend .input-group-text+.input-group-text {
+    margin-left: -2px;
+}
+
+.input-group>.custom-file+.custom-file,
+.input-group>.custom-file+.custom-select,
+.input-group>.custom-file+.form-control,
+.input-group>.custom-file+.dd-handle,
+.input-group>.custom-select+.custom-file,
+.input-group>.custom-select+.custom-select,
+.input-group>.custom-select+.form-control,
+.input-group>.custom-select+.dd-handle,
+.input-group>.form-control+.custom-file,
+.input-group>.dd-handle+.custom-file,
+.input-group>.form-control+.custom-select,
+.input-group>.dd-handle+.custom-select,
+.input-group>.form-control+.form-control,
+.input-group>.dd-handle+.form-control,
+.input-group>.form-control+.dd-handle,
+.input-group>.dd-handle+.dd-handle {
+    margin-left: -2px;
+}
+
+.input-group-text {
+    border-color: #eaecec;
+    background-color: #f5f5f6;
+    border-width: 2px;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #324148;
+}
+
+.custom-control-input:disabled~.custom-control-label {
+    color: #5e7d8a;
+}
+
+.custom-file-label {
+    color: #324148;
+    border: 2px solid #eaecec;
+    height: calc(2.25rem + 4px);
+}
+
+.custom-file-label:after {
+    border-left: 0;
+    background: #f5f5f6;
+}
+
+
+/*Form validation*/
+
+.custom-select.is-valid,
+.form-control.is-valid,
+.is-valid.dd-handle,
+.was-validated .custom-select:valid,
+.was-validated .form-control:valid,
+.was-validated .dd-handle:valid {
+    border-color: #22af47;
+}
+
+.custom-select.is-invalid,
+.form-control.is-invalid,
+.is-invalid.dd-handle,
+.was-validated .custom-select:invalid,
+.was-validated .form-control:invalid,
+.was-validated .dd-handle:invalid {
+    border-color: #f95851;
+}
+
+.valid-feedback {
+    color: #22af47;
+}
+
+.invalid-feedback {
+    color: #f95851;
+}
+
+.custom-control-input.is-valid~.custom-control-label,
+.was-validated .custom-control-input:valid~.custom-control-label {
+    color: #22af47;
+}
+
+.custom-control-input.is-invalid~.custom-control-label,
+.was-validated .custom-control-input:invalid~.custom-control-label {
+    color: #f95851;
+}
+
+.custom-control-input.is-invalid~.custom-control-label::before,
+.was-validated .custom-control-input:invalid~.custom-control-label::before {
+    background-color: #f95851;
+}
+
+.custom-control-input.is-valid~.custom-control-label::before,
+.was-validated .custom-control-input:valid~.custom-control-label::before {
+    background-color: #22af47;
+}
+
+.custom-control-input.is-valid:checked~.custom-control-label::before,
+.was-validated .custom-control-input:valid:checked~.custom-control-label::before {
+    background-color: #22af47;
+}
+
+.custom-control-input.is-invalid:focus~.custom-control-label::before,
+.was-validated .custom-control-input:invalid:focus~.custom-control-label::before {
+    box-shadow: none;
+}
+
+.custom-control-input.is-valid:focus~.custom-control-label::before,
+.was-validated .custom-control-input:valid:focus~.custom-control-label::before {
+    box-shadow: none;
+}
+
+.custom-select.is-valid:focus,
+.form-control.is-valid:focus,
+.is-valid.dd-handle:focus,
+.was-validated .custom-select:valid:focus,
+.was-validated .form-control:valid:focus,
+.was-validated .dd-handle:valid:focus {
+    border-color: #22af47;
+    box-shadow: none;
+}
+
+.custom-select.is-invalid:focus,
+.form-control.is-invalid:focus,
+.is-invalid.dd-handle:focus,
+.was-validated .custom-select:invalid:focus,
+.was-validated .form-control:invalid:focus,
+.was-validated .dd-handle:invalid:focus {
+    border-color: #f95851;
+    box-shadow: none;
+}
+
+.custom-file-input.is-invalid~.custom-file-label,
+.was-validated .custom-file-input:invalid~.custom-file-label {
+    border-color: #f95851;
+}
+
+.custom-file-input.is-valid~.custom-file-label,
+.was-validated .custom-file-input:valid~.custom-file-label {
+    border-color: #22af47;
+}
+
+.custom-file-input.is-valid:focus~.custom-file-label,
+.was-validated .custom-file-input:valid:focus~.custom-file-label {
+    box-shadow: none;
+    border-color: #22af47;
+}
+
+.custom-file-input.is-invalid:focus~.custom-file-label,
+.was-validated .custom-file-input:invalid:focus~.custom-file-label {
+    box-shadow: none;
+    border-color: #f95851;
+}
+
+.ap-sec-wrapper .valid-tooltip {
+    background: #22af47;
+    position: inherit;
+}
+
+.ap-sec-wrapper .invalid-tooltip {
+    background: #f95851;
+    position: inherit;
+}
+
+.custom-valid::before {
+    top: 3px !important;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    border-color: #28a745;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+
+/* Form Editor */
+
+.note-editor.note-airframe,
+.note-editor.note-frame {
+    border: 1px solid #eee
+}
+
+.note-modal-footer {
+    margin-bottom: 20px;
+}

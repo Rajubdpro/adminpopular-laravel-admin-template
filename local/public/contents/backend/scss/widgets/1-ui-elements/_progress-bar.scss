@@ -1,0 +1,79 @@
+
+/*=================================
+    26.Progressbar CSS
+=================================*/
+
+.ap-progress p {
+    color: #606060;
+    line-height: 26px;
+    width: 100%;
+    text-align: justify;
+}
+
+.ap-progress .progress {
+    margin-bottom: 2rem
+}
+
+.progress-bar-default {
+    background-color: #d6d6d6;
+}
+
+.progress-bar-primary {
+    background-color: #4099ff;
+}
+
+.progress-bar-success {
+    background-color: #2ed8b6;
+}
+
+.progress-bar-info {
+    background-color: #00bcd4;
+}
+
+.progress-bar-warning {
+    background-color: #FFB64D;
+}
+
+.progress-bar-danger {
+    background-color: #FF5370;
+}
+
+.progress-bar-pink {
+    background-color: #ff7aa3;
+}
+
+.progress-bar-purple {
+    background-color: #9261c6;
+}
+
+.progress-bar-orange {
+    background-color: #e67e22;
+}
+
+.progress-bar-yellow {
+    background-color: #f1c40f;
+}
+
+.progress-bar-emrald {
+    background-color: #2ecc71;
+}
+
+.progress {
+    height: 1rem;
+}
+
+.progress-xl {
+    height: 30px;
+}
+
+.progress-lg {
+    height: 24px;
+}
+
+.progress-sm {
+    height: 12px;
+}
+
+.progress-xs {
+    height: 4px;
+}

@@ -1,0 +1,215 @@
+/*Form-Wizard*/
+
+.wizard .wizard-icon-wrap {
+    display: table;
+    height: 35px;
+    width: 35px;
+    background: #e0e3e4;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.wizard .wizard-icon-wrap:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00acf0;
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.wizard .wizard-icon-wrap i {
+    display: table-cell;
+    vertical-align: middle;
+    color: #6f7a7f;
+    font-size: 21px;
+    position: relative;
+    z-index: 2;
+}
+
+.wizard .wizard-head-text-wrap {
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: 7px;
+}
+
+.wizard .wizard-head-text-wrap>span {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #324148;
+    text-transform: uppercase;
+}
+
+.wizard .wizard-head-text-wrap .step-count {
+    color: #adb3b6;
+    font-size: 13px;
+}
+
+.wizard>.content {
+    background: #fff;
+    border-radius: 0;
+    min-height: 100px;
+    margin: 0;
+    border: none;
+    padding-bottom: 10px;
+}
+
+.wizard>.content>.body {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    position: static;
+}
+
+.wizard>.content>.body input {
+    border-width: 2px;
+    border-color: #eaecec;
+}
+
+.wizard>.content>.body ul>li {
+    display: inherit;
+}
+
+.wizard>.actions {
+    background: #fff;
+    padding: 10px 30px;
+}
+
+.wizard>.actions a,
+.wizard>.actions a:hover,
+.wizard>.actions a:active {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    background: #00acf0;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #00acf0;
+    text-transform: capitalize;
+    outline: none;
+    border-width: 2px;
+    border-radius: .25rem;
+    padding: .15rem .4rem;
+    font-size: .75rem;
+}
+
+.wizard>.actions .disabled a,
+.wizard>.actions .disabled a:hover,
+.wizard>.actions .disabled a:active {
+    background: #cecece;
+    color: #fff;
+    border: 1px solid #cecece;
+    opacity: .65;
+}
+
+.wizard>.actions>ul>li {
+    margin: 0 0.3em;
+}
+
+.wizard>.steps {
+    margin-bottom: 20px;
+}
+
+.wizard>.steps>ul>li {
+    width: auto;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.wizard>.steps a,
+.wizard>.steps a:hover,
+.wizard>.steps a:active {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.wizard>.steps .current a,
+.wizard>.steps .current a:hover,
+.wizard>.steps .current a:active {
+    background: transparent;
+    color: inherit;
+}
+
+.wizard>.steps .current a .wizard-icon-wrap,
+.wizard>.steps .current a:hover .wizard-icon-wrap,
+.wizard>.steps .current a:active .wizard-icon-wrap {
+    background: transparent;
+}
+
+.wizard>.steps .current a .wizard-icon-wrap:before,
+.wizard>.steps .current a:hover .wizard-icon-wrap:before,
+.wizard>.steps .current a:active .wizard-icon-wrap:before {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.wizard>.steps .current a .wizard-icon-wrap i,
+.wizard>.steps .current a:hover .wizard-icon-wrap i,
+.wizard>.steps .current a:active .wizard-icon-wrap i {
+    color: #fff;
+}
+
+.wizard>.steps .done a,
+.wizard>.steps .done a:hover,
+.wizard>.steps .done a:active {
+    background: transparent;
+    color: inherit;
+    overflow: hidden;
+}
+
+.wizard>.steps .done a .wizard-icon-wrap,
+.wizard>.steps .done a:hover .wizard-icon-wrap,
+.wizard>.steps .done a:active .wizard-icon-wrap {
+    background: #009b84;
+}
+
+.wizard>.steps .done a .wizard-icon-wrap:before,
+.wizard>.steps .done a:hover .wizard-icon-wrap:before,
+.wizard>.steps .done a:active .wizard-icon-wrap:before {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.wizard>.steps .done a .wizard-icon-wrap i,
+.wizard>.steps .done a:hover .wizard-icon-wrap i,
+.wizard>.steps .done a:active .wizard-icon-wrap i {
+    color: #fff;
+}
+
+.wizard>.steps .disabled a,
+.wizard>.steps .disabled a:hover,
+.wizard>.steps .disabled a:active {
+    background: transparent;
+    color: inherit;
+}
+
+@media (max-width: 991px) {
+    .wizard .steps ul>li {
+        width: 100%;
+    }
+}

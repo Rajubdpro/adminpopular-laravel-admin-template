@@ -1,0 +1,110 @@
+
+@import "widgets/foundation.scss";
+
+
+@import "widgets/5-table/table";
+
+
+@import "widgets/1-ui-elements/widgets/button";
+
+@import "widgets/1-ui-elements/widgets/card";
+
+.progress-xs,
+.progress-xs .progress-bar {
+    height: .25rem;
+}
+
+.bg-pink,
+.bg-yellow,
+.bg-lime,
+.bg-green,
+.bg-teal,
+.bg-cyan {
+    background-color: #e21e32 !important;
+}
+
+@import "widgets/3-mailbox/mailbox.scss";
+
+
+
+@import "widgets/1-ui-elements/widgets/recent-order";
+@import "widgets/1-ui-elements/widgets/transaction";
+
+
+@import "widgets/9-pages/invoice";
+@import "widgets/9-pages/404";
+
+@import "widgets/9-pages/user-profile";
+
+@import "widgets/9-pages/login-register";
+
+
+@import "widgets/7-icons/font-awesome";
+@import "widgets/7-icons/thimify";
+
+@import "widgets/8-forms/form-elements";
+
+@import "widgets/8-forms/select2";
+@import "widgets/8-forms/checkbox";
+@import "widgets/8-forms/radio";
+
+@import "widgets/8-forms/file-upload";
+
+
+@import "widgets/8-forms/toggle";
+@import "widgets/8-forms/range-slider";
+@import "widgets/8-forms/date-picker";
+
+@import "widgets/8-forms/form-wizard";
+
+@import "widgets/11-maps/maps.scss";
+
+@import "widgets/1-ui-elements/widgets/timeline-chat";
+
+@import "widgets/10-chat/chat.scss";
+@import "widgets/1-ui-elements/tab-and-accordion.scss";
+@import "widgets/1-ui-elements/modal.scss";
+@import "widgets/1-ui-elements/progress-bar.scss";
+@import "widgets/1-ui-elements/alert.scss";
+
+
+
+@import "widgets/2-ecommerce/ecomerce";
+
+
+/*=================================
+    29.Responsive
+=================================*/
+
+
+
+@media only screen and (max-width:767px) {
+    .widget-box .widget-inner {
+        padding: 15px
+    }
+    .adminpopular-wrapper {
+        padding-left: 0;
+        padding-right: 0
+    }
+    .adminpopular-sidebar-toggle-button {
+        display: none
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .adminpopular-header-submenu.noti-menu {
+        width: 280px
+    }
+    .breadcrumb-title {
+        font-size: 18px
+    }
+    .db-breadcrumb-list li {
+        font-size: 12px
+    }
+    .db-breadcrumb {
+        margin-bottom: 15px
+    }
+    .adminpopular-sidebar-toggle-button {
+        display: none
+    }
+}

@@ -1,0 +1,106 @@
+/*=================================
+    24.Tab-and-Accordion CSS
+=================================*/
+.accordion-button:focus,
+.accordion-button:active
+{
+    box-shadow: none;
+}
+
+.tab-accordion p {
+    color: #606060;
+    line-height: 26px;
+    width: 100%;
+    text-align: justify;
+}
+
+.tab-accordion .nav-pills.nav-secondary .nav-link.active {
+    background: #6861CE;
+    border: 1px solid #6861CE;
+}
+
+.tab-accordion .nav-item a {
+    border: 1px solid #eeeeee;
+    margin-left: -1px;
+    border-radius: 0 !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #585c5d;
+}
+
+.tab-accordion .nav-pills.nav-secondary .nav-link.active {
+    background: #6861CE;
+    border: 1px solid #6861CE;
+    color: #fff;
+}
+
+.tab-accordion .nav-pills.flex-column .nav-link {
+    border-radius: 0 !important;
+    border: 1px solid #eeeeee;
+    margin-top: -1px;
+    text-align: center;
+    word-wrap: normal;
+    padding: 10px 0;
+    color: #585c5d
+}
+
+.tab-accordion .nav-pills.nav-pills-no-bd li {
+    margin-left: 15px !important;
+}
+
+.tab-accordion .nav-pills.nav-pills-no-bd li .nav-link {
+    border: 0px !important;
+    border-radius: 50px !important;
+    background: rgba(222, 222, 222, 0.4);
+}
+
+.tab-accordion .nav-pills.flex-column.nav-pills-no-bd .nav-link {
+    border: 0px !important;
+    border-radius: 50px !important;
+    background: rgba(222, 222, 222, 0.4);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.tab-accordion .nav-pills.nav-secondary .nav-link.active {
+    background: #6861CE;
+    border: 1px solid #6861CE;
+}
+
+.tab-accordion .nav-pills.nav-pills-icons i {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    line-height: 50px;
+}
+
+.bottom-tabs .nav-pills.flex-column.nav-pills-no-bd .nav-link {
+    border: 0px !important;
+    border-radius: 10px !important;
+    background: rgba(222, 222, 222, 0.4);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.bottom-tabs .nav-pills.nav-secondary .nav-link.active {
+    background: #6861CE !important;
+    border: 1px solid #6861CE;
+}
+
+.bottom-tabs .nav-pills.nav-pills-no-bd li .nav-link {
+    border: 0px !important;
+    border-radius: 10px !important;
+    background: rgba(222, 222, 222, 0.4);
+}
+
+.bottom-tabs .nav-pills.flex-column.nav-pills-no-bd .nav-link {
+    border: 0px !important;
+    border-radius: 10px !important;
+    background: rgba(222, 222, 222, 0.4);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ap-accordion .btn.btn-link {
+    color: #333
+}

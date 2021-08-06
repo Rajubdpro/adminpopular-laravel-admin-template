@@ -1,0 +1,558 @@
+/*Jquery Toggle*/
+
+.toggle-wrap .toggle {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.toggle {
+    width: 50px;
+    height: 25px;
+    display: inline-block;
+}
+
+.toggle .toggle-on,
+.toggle .toggle-select .toggle-inner .active {
+    background: #00acf0;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle .toggle-off {
+    background: #6f7a7f;
+    text-shadow: none;
+    color: #fff;
+}
+
+.toggle .toggle-slide {
+    box-shadow: none;
+}
+
+.toggle .toggle-on+.toggle-blob {
+    background: #fff;
+    box-shadow: none;
+    border: 3px solid #6f7a7f;
+}
+
+.toggle .toggle-on.active+.toggle-blob {
+    border-color: #00acf0;
+}
+
+.toggle .toggle-select .toggle-on,
+.toggle .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-sky .toggle-on,
+.toggle.toggle-bg-sky .toggle-select .toggle-inner .active,
+.toggle.toggle-bg-primary .toggle-on,
+.toggle.toggle-bg-primary .toggle-select .toggle-inner .active {
+    background: #00acf0;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-sky .toggle-select .toggle-on,
+.toggle.toggle-bg-sky .toggle-select .toggle-off,
+.toggle.toggle-bg-primary .toggle-select .toggle-on,
+.toggle.toggle-bg-primary .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-sky .toggle-on.active+.toggle-blob,
+.toggle.toggle-bg-primary .toggle-on.active+.toggle-blob {
+    border-color: #00acf0;
+}
+
+.toggle.toggle-bg-cyan .toggle-on,
+.toggle.toggle-bg-cyan .toggle-select .toggle-inner .active,
+.toggle.toggle-bg-info .toggle-on,
+.toggle.toggle-bg-info .toggle-select .toggle-inner .active {
+    background: #1ebccd;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-cyan .toggle-select .toggle-on,
+.toggle.toggle-bg-cyan .toggle-select .toggle-off,
+.toggle.toggle-bg-info .toggle-select .toggle-on,
+.toggle.toggle-bg-info .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-cyan .toggle-on.active+.toggle-blob,
+.toggle.toggle-bg-info .toggle-on.active+.toggle-blob {
+    border-color: #1ebccd;
+}
+
+.toggle.toggle-bg-green .toggle-on,
+.toggle.toggle-bg-green .toggle-select .toggle-inner .active,
+.toggle.toggle-bg-success .toggle-on,
+.toggle.toggle-bg-success .toggle-select .toggle-inner .active {
+    background: #22af47;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-green .toggle-select .toggle-on,
+.toggle.toggle-bg-green .toggle-select .toggle-off,
+.toggle.toggle-bg-success .toggle-select .toggle-on,
+.toggle.toggle-bg-success .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-green .toggle-on.active+.toggle-blob,
+.toggle.toggle-bg-success .toggle-on.active+.toggle-blob {
+    border-color: #22af47;
+}
+
+.toggle.toggle-bg-yellow .toggle-on,
+.toggle.toggle-bg-yellow .toggle-select .toggle-inner .active,
+.toggle.toggle-bg-warning .toggle-on,
+.toggle.toggle-bg-warning .toggle-select .toggle-inner .active {
+    background: #ffbf36;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-yellow .toggle-select .toggle-on,
+.toggle.toggle-bg-yellow .toggle-select .toggle-off,
+.toggle.toggle-bg-warning .toggle-select .toggle-on,
+.toggle.toggle-bg-warning .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-yellow .toggle-on.active+.toggle-blob,
+.toggle.toggle-bg-warning .toggle-on.active+.toggle-blob {
+    border-color: #ffbf36;
+}
+
+.toggle.toggle-bg-red .toggle-on,
+.toggle.toggle-bg-red .toggle-select .toggle-inner .active,
+.toggle.toggle-bg-danger .toggle-on,
+.toggle.toggle-bg-danger .toggle-select .toggle-inner .active {
+    background: #f83f37;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-red .toggle-select .toggle-on,
+.toggle.toggle-bg-red .toggle-select .toggle-off,
+.toggle.toggle-bg-danger .toggle-select .toggle-on,
+.toggle.toggle-bg-danger .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-red .toggle-on.active+.toggle-blob,
+.toggle.toggle-bg-danger .toggle-on.active+.toggle-blob {
+    border-color: #f83f37;
+}
+
+.toggle.toggle-bg-pink .toggle-on,
+.toggle.toggle-bg-pink .toggle-select .toggle-inner .active {
+    background: #ed1b60;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-pink .toggle-select .toggle-on,
+.toggle.toggle-bg-pink .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-pink .toggle-on.active+.toggle-blob {
+    border-color: #ed1b60;
+}
+
+.toggle.toggle-bg-purple .toggle-on,
+.toggle.toggle-bg-purple .toggle-select .toggle-inner .active {
+    background: #ab26aa;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-purple .toggle-select .toggle-on,
+.toggle.toggle-bg-purple .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-purple .toggle-on.active+.toggle-blob {
+    border-color: #ab26aa;
+}
+
+.toggle.toggle-bg-violet .toggle-on,
+.toggle.toggle-bg-violet .toggle-select .toggle-inner .active {
+    background: #6640b2;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-violet .toggle-select .toggle-on,
+.toggle.toggle-bg-violet .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-violet .toggle-on.active+.toggle-blob {
+    border-color: #ab26aa;
+}
+
+.toggle.toggle-bg-indigo .toggle-on,
+.toggle.toggle-bg-indigo .toggle-select .toggle-inner .active {
+    background: #3a55b1;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-indigo .toggle-select .toggle-on,
+.toggle.toggle-bg-indigo .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-indigo .toggle-on.active+.toggle-blob {
+    border-color: #3a55b1;
+}
+
+.toggle.toggle-bg-blue .toggle-on,
+.toggle.toggle-bg-blue .toggle-select .toggle-inner .active {
+    background: #0092ee;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-blue .toggle-select .toggle-on,
+.toggle.toggle-bg-blue .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-blue .toggle-on.active+.toggle-blob {
+    border-color: #0092ee;
+}
+
+.toggle.toggle-bg-teal .toggle-on,
+.toggle.toggle-bg-teal .toggle-select .toggle-inner .active {
+    background: #009b84;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-teal .toggle-select .toggle-on,
+.toggle.toggle-bg-teal .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-teal .toggle-on.active+.toggle-blob {
+    border-color: #009b84;
+}
+
+.toggle.toggle-bg-neon .toggle-on,
+.toggle.toggle-bg-neon .toggle-select .toggle-inner .active {
+    background: #88c241;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-neon .toggle-select .toggle-on,
+.toggle.toggle-bg-neon .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-neon .toggle-on.active+.toggle-blob {
+    border-color: #88c241;
+}
+
+.toggle.toggle-bg-lime .toggle-on,
+.toggle.toggle-bg-lime .toggle-select .toggle-inner .active {
+    background: #d0d962;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-lime .toggle-select .toggle-on,
+.toggle.toggle-bg-lime .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-lime .toggle-on.active+.toggle-blob {
+    border-color: #d0d962;
+}
+
+.toggle.toggle-bg-sun .toggle-on,
+.toggle.toggle-bg-sun .toggle-select .toggle-inner .active {
+    background: #fde335;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-sun .toggle-select .toggle-on,
+.toggle.toggle-bg-sun .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-sun .toggle-on.active+.toggle-blob {
+    border-color: #fde335;
+}
+
+.toggle.toggle-bg-orange .toggle-on,
+.toggle.toggle-bg-orange .toggle-select .toggle-inner .active {
+    background: #ff9528;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-orange .toggle-select .toggle-on,
+.toggle.toggle-bg-orange .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-orange .toggle-on.active+.toggle-blob {
+    border-color: #ff9528;
+}
+
+.toggle.toggle-bg-pumpkin .toggle-on,
+.toggle.toggle-bg-pumpkin .toggle-select .toggle-inner .active {
+    background: #ff6028;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-pumpkin .toggle-select .toggle-on,
+.toggle.toggle-bg-pumpkin .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-pumpkin .toggle-on.active+.toggle-blob {
+    border-color: #ff6028;
+}
+
+.toggle.toggle-bg-brown .toggle-on,
+.toggle.toggle-bg-brown .toggle-select .toggle-inner .active {
+    background: #7a5449;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-brown .toggle-select .toggle-on,
+.toggle.toggle-bg-brown .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-brown .toggle-on.active+.toggle-blob {
+    border-color: #7a5449;
+}
+
+.toggle.toggle-bg-gold .toggle-on,
+.toggle.toggle-bg-gold .toggle-select .toggle-inner .active {
+    background: #c1993f;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-gold .toggle-select .toggle-on,
+.toggle.toggle-bg-gold .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-gold .toggle-on.active+.toggle-blob {
+    border-color: #c1993f;
+}
+
+.toggle.toggle-bg-grey .toggle-on,
+.toggle.toggle-bg-grey .toggle-select .toggle-inner .active,
+.toggle.toggle-bg-secondary .toggle-on,
+.toggle.toggle-bg-secondary .toggle-select .toggle-inner .active,
+.toggle.toggle-bg-muted .toggle-on,
+.toggle.toggle-bg-muted .toggle-select .toggle-inner .active {
+    background: #9e9e9e;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-grey .toggle-select .toggle-on,
+.toggle.toggle-bg-grey .toggle-select .toggle-off,
+.toggle.toggle-bg-secondary .toggle-select .toggle-on,
+.toggle.toggle-bg-secondary .toggle-select .toggle-off,
+.toggle.toggle-bg-muted .toggle-select .toggle-on,
+.toggle.toggle-bg-muted .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-grey .toggle-on.active+.toggle-blob,
+.toggle.toggle-bg-secondary .toggle-on.active+.toggle-blob,
+.toggle.toggle-bg-muted .toggle-on.active+.toggle-blob {
+    border-color: #9e9e9e;
+}
+
+.toggle.toggle-bg-dark .toggle-on,
+.toggle.toggle-bg-dark .toggle-select .toggle-inner .active {
+    background: #324148;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-dark .toggle-select .toggle-on,
+.toggle.toggle-bg-dark .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-dark .toggle-on.active+.toggle-blob {
+    border-color: #324148;
+}
+
+.toggle.toggle-bg-light .toggle-on,
+.toggle.toggle-bg-light .toggle-select .toggle-inner .active {
+    background: #848d91;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.toggle.toggle-bg-light .toggle-select .toggle-on,
+.toggle.toggle-bg-light .toggle-select .toggle-off {
+    background: #6f7a7f;
+    color: #fff;
+}
+
+.toggle.toggle-bg-light .toggle-on.active+.toggle-blob {
+    border-color: #848d91;
+}
+
+.toggle.toggle-lg {
+    width: 64px;
+    height: 32px;
+}
+
+.toggle.toggle-lg .toggle-on,
+.toggle.toggle-lg .toggle-select .toggle-inner .active {
+    font-size: 12px;
+}
+
+.toggle.toggle-sm {
+    width: 50px;
+    height: 20px;
+}
+
+.toggle.toggle-sm .toggle-on,
+.toggle.toggle-sm .toggle-select .toggle-inner .active {
+    font-size: 10px;
+}
+
+.toggle.toggle-simple {
+    width: 47px;
+}
+
+.toggle.toggle-simple.toggle-lg {
+    width: 58px;
+}
+
+.toggle.toggle-simple.toggle-sm {
+    width: 35px;
+}
+
+.toggle-light .toggle-slide {
+    border-radius: 9999px;
+}
+
+.toggle-light .toggle-on,
+.toggle-light .toggle-off {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.toggle-light .toggle-on,
+.toggle-light .toggle-select .toggle-inner .active {
+    background: #45a31f;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.toggle-light .toggle-off,
+.toggle-light .toggle-select .toggle-on {
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+    background: -webkit-linear-gradient(#cfcfcf, #f5f5f5);
+    background: linear-gradient(#cfcfcf, #f5f5f5);
+}
+
+.toggle-light .toggle-blob {
+    border-radius: 50px;
+    background: -webkit-linear-gradient(#f5f5f5, #cfcfcf);
+    background: linear-gradient(#f5f5f5, #cfcfcf);
+    box-shadow: 1px 1px 2px #888;
+}
+
+.toggle-light .toggle-blob:hover {
+    background: -webkit-linear-gradient(#e4e4e4, #f9f9f9);
+    background: linear-gradient(#e4e4e4, #f9f9f9);
+}
+
+.toggle-slide {
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    direction: ltr;
+    text-align: center;
+}
+
+div.disabled>.toggle-slide {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.toggle-slide .toggle-on,
+.toggle-slide .toggle-off,
+.toggle-slide .toggle-blob {
+    float: left;
+}
+
+.toggle-slide .toggle-blob {
+    position: relative;
+    z-index: 99;
+    cursor: hand;
+    cursor: grab;
+}
