@@ -66,11 +66,8 @@
               
 
                  <div class="tile-footer text-center mt-20">
-                   @if (env('demo_mode')!= 'enabled')
                       <button class="btn btn-primary" type="submit" <?php echo $edit->id == 1 ? 'disabled' : '';?>><i class="fa fa-fw fa-lg fa-check-circle"></i>Submit</button> 
-                    @else
-                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title=" Currently Demo Mode"> Submit</button>
-                  @endif
+
                    <a href="{{route('user-role.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left fa-lg fa-check-circle"></i>Back</a>
                 </div>
 

@@ -3571,7 +3571,7 @@ div#activities .activity-single:not(:last-child) {
   border-width: 1px;
   border-color: #eaecec;
   padding: .375rem .75rem;
-  height: calc(2.25rem + 4px); }
+ }
 
 .form-control:focus,
 .dd-handle:focus {

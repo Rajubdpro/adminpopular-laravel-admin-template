@@ -260,7 +260,9 @@
 
               if(isset($get_user->relational_user_role)){
               $get_menu_option = $get_user->relational_user_role->show_option; 
-              $stringToArray = explode(',', $get_menu_option);?>
+              $stringToArray = explode(',', $get_menu_option);
+                
+              ?>
               
             @if(in_array('Dashboard', $stringToArray))
             <li>
