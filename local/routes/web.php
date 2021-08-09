@@ -10,9 +10,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\service;
-use App\page;
 
+use App\page;
+use backend\CustomUserController;
+use backend\UserRoleController;
+use App\Http\Controllers\backend\BackendController;
+use App\Http\Controllers\backend\PageController;
+use App\Http\Controllers\backend\NewsleterController;
+use backend\SettingController;
 
 
 
@@ -21,31 +26,25 @@ Auth::routes(['register' => true]);
 Route::get('/', function(){
         return redirect(route('login'));
 });
-Route::get('/home', 'backend\BackendController@index')->name('home');
-Route::get('/get_chartinfo', 'backend\BackendController@get_chartinfo');
 
-// Custom User Managment
-Route::resource('/custom-user', 'backend\CustomUserController');
+Route::get('/home', [BackendController::class, 'index'])->name('home');
+Route::get('/get_chartinfo', [BackendController::class, 'get_chartinfo']);
 
-// User Role Managment
-Route::resource('/user-role', 'backend\UserRoleController');
+// Custom User Managment.
+Route::resource('/custom-user', CustomUserController::class);
 
-// Admin Page
-Route::get('page_deactive/{id}', 'backend\PageController@deactive');
-Route::get('page_active/{id}', 'backend\PageController@active');
+// User Role Managment.
+Route::resource('/user-role', UserRoleController::class);
+
+// Admin Page.
+Route::get('page_deactive/{id}', [PageController::class, 'deactive']);
+Route::get('page_active/{id}', [PageController::class, 'active']);
 Route::resource('/admin_page', 'backend\PageController');
 
-// Admin newsletter
-Route::get('email_deactive/{id}', 'backend\NewsleterController@deactive');
-Route::get('email_active/{id}', 'backend\NewsleterController@active');
+// Admin newsletter.
+Route::get('email_deactive/{id}', [NewsleterController::class, 'deactive']);
+Route::get('email_active/{id}', [NewsleterController::class, 'active']);
 Route::resource('/newsletter', 'backend\NewsleterController');
 
-// Admin Settings
-Route::resource('admin_settings','backend\SettingController');
-
-Route::get('/{slug}', function($slug){
-	
-        $pageinfo = page::where('slug',$slug)->first();
-        return view('frontend.page', compact('pageinfo'));
-});
-
+// Admin Settings.
+Route::resource('admin_settings', SettingController::class);

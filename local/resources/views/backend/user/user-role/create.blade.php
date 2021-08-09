@@ -59,11 +59,7 @@
               
 
                  <div class="tile-footer text-center">
-                @if (env('demo_mode')!= 'enabled')
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Submit</button> 
-                @else
-                  <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title=" Currently Demo Mode"> Register</button>
-                @endif
+                   <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Submit</button> 
                    <a href="{{route('user-role.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left fa-lg fa-check-circle"></i>Back</a>
                 </div>
                 <br>
