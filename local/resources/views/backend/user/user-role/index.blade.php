@@ -11,7 +11,7 @@
 </div>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <a class="btn btn-primary btn-sm" href="{{route('user-role.create')}}"><i class="fa fa-plus fa-lg fa-check-circle"></i>Add New Role</a>
+          <a class="btn btn-primary" href="{{route('user-role.create')}}"><i class="fa fa-plus"></i>Add New Role</a>
           @if(Session('status'))
           <div class="text-center text-success">
           <h5>Data Deleted Sucessfully</h5></div>
@@ -36,15 +36,15 @@
                       <td class="align-middle">{{$roleinfo->role_status}}</td>
                       <td class="align-middle">
                         <div class="table-action">
-                        <a data-toggle="tooltip" data-placement="top" title="Edit" href="{{route('user-role.edit',$roleinfo->id)}}" class="btn btn-primary btn-sm tooltip-danger">
+                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" href="{{route('user-role.edit',$roleinfo->id)}}" class="btn btn-primary tooltip-danger">
                           <i class="fa fa-pencil"></i>
                         </a>
-                        <a data-toggle="tooltip" data-placement="top" title="View"  href="{{route('user-role.show',$roleinfo->id)}}" class="btn btn-success btn-sm"> <i class="fa fa-eye"></i></a>
+                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="View"  href="{{route('user-role.show',$roleinfo->id)}}" class="btn btn-success"> <i class="fa fa-eye"></i></a>
                         @if($roleinfo->id != 1 && $roleinfo->id != 2)
                         <form action="{{route('user-role.destroy',$roleinfo->id)}}" method="post" class="d-inline">
                           @method('DELETE')
                           @csrf
-                        <button onclick="return window.confirm('are you sure want to delete')" data-toggle="tooltip" data-placement="top" title="Delete"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                        <button onclick="return window.confirm('are you sure want to delete')" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"  class="btn btn-danger"><i class="fa fa-trash"></i></button>
                         </form>
                         @endif
                       </div>

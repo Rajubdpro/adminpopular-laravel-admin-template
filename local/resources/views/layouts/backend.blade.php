@@ -30,6 +30,7 @@
     <!-- Main style -->
     <link rel="stylesheet" type="text/css" href="{{asset('local/public/contents/backend')}}/css/dashboard.css" />
     <link rel="stylesheet" type="text/css" href="{{asset('local/public/contents/backend')}}/css/dashboard-light.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('local/public/contents/backend')}}/css/custom.css">
 </head>
 
 <body class="sidebar-mini">

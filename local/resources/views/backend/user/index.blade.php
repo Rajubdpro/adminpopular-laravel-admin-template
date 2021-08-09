@@ -12,7 +12,7 @@
     </div>
       <div class="row">
         <div class="col-md-12">
-          <a class="btn btn-primary btn-sm mb-2" href="{{route('custom-user.create')}}"><i class="fa fa-plus fa-lg fa-check-circle"></i>Add New</a>
+          <a class="btn btn-primary mb-2" href="{{route('custom-user.create')}}"><i class="fa fa-plus"></i>Add New</a>
           @if(Session('status'))
           <div class="text-center text-success">
           <h5>Data Deleted Sucessfully</h5></div>
@@ -47,22 +47,22 @@
                       <td class="align-middle">{{$getuser->email}}</td>
                       <td class="align-middle">
                         <div class="table-action">
-                        <a data-toggle="tooltip" data-placement="top" title="Edit" href="{{route('custom-user.edit',$getuser->id)}}" class="btn btn-primary btn-sm tooltip-danger">
+                        <a data-toggle="tooltip" data-placement="top" title="Edit" href="{{route('custom-user.edit',$getuser->id)}}" class="btn btn-primary tooltip-danger">
                           <i class="fa fa-pencil"></i>
                         </a>
-                        <a data-toggle="tooltip" data-placement="top" title="View"  href="{{route('custom-user.show',$getuser->id)}}" class="btn btn-success btn-sm"> <i class="fa fa-eye"></i></a>
+                        <a data-toggle="tooltip" data-placement="top" title="View"  href="{{route('custom-user.show',$getuser->id)}}" class="btn btn-success"> <i class="fa fa-eye"></i></a>
                         @if($getuser->id != 1)
 
 
                         @if(env('demo_mode') == 'enabled')
 
-                        <button data-toggle="tooltip" data-placement="top" title="Demo Mode Please"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                        <button data-toggle="tooltip" data-placement="top" title="Demo Mode Please"  class="btn btn-danger"><i class="fa fa-trash"></i></button>
                        
                         @else
                            <form action="{{route('custom-user.destroy',$getuser->id)}}" method="post" class="d-inline">
                             @method('DELETE')
                             @csrf
-                          <button onclick="return window.confirm('are you sure want to delete')" data-toggle="tooltip" data-placement="top" title="Delete"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                          <button onclick="return window.confirm('are you sure want to delete')" data-toggle="tooltip" data-placement="top" title="Delete"  class="btn btn-danger"><i class="fa fa-trash"></i></button>
                           </form>
                         @endif
 
@@ -76,9 +76,8 @@
                    
                   </tbody>
                 </table>
-                  @if(env('demo_mode') != 'enabled')
+               
                 <a class="btn btn-circle btn-info btn-xs mb-10 mt-20" href="{{route('user-role.index')}}"> Role Managment</a>
-                @endif
               </div>
             </div>
           </div>

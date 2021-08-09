@@ -14,7 +14,7 @@
         <div class="col-md-12">
           <div class="title">
             @if (env('demo_mode') != 'enabled')
-            <a class="btn btn-primary btn-sm" style="color:#fff"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="fa fa-plus fa-lg fa-check-circle"></i>Add Email</a>
+            <a class="btn btn-primary" style="color:#fff"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="fa fa-plus fa-lg fa-check-circle"></i>Add Email</a>
             @endif
             @if(Session('status'))
             <div class="text-center text-success">
@@ -43,25 +43,21 @@
                         <td class="align-middle">{{$emailinfo->email}}</td>
                         <td class="align-middle" >
                           @if($emailinfo->status ==1)
-                              <a href="{{URL::to('email_deactive',$emailinfo->id)}}" class="btn btn-primary btn-sm">Active</a>
+                              <a href="{{URL::to('email_deactive',$emailinfo->id)}}" class="btn btn-primary">Active</a>
 
                         @else
-                              <a href="{{URL::to('email_active',$emailinfo->id)}}" class="btn btn-danger btn-sm">Deactive</a>
+                              <a href="{{URL::to('email_active',$emailinfo->id)}}" class="btn btn-danger">Deactive</a>
                         @endif
 
                         </td>
                         <td class="align-middle">
                           <div class="table-action">
-                          @if (env('demo_mode') != 'enabled')
                           <form action="{{route('newsletter.destroy',$emailinfo->id)}}" method="post" class="d-inline">
                             @method('DELETE')
                             @csrf
-                          <button onclick="return window.confirm('are you sure want to delete')" data-toggle="tooltip" data-placement="top" title="Delete"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                          <button onclick="return window.confirm('are you sure want to delete')" data-toggle="tooltip" data-placement="top" title="Delete"  class="btn btn-danger"><i class="fa fa-trash"></i></button>
                           </form>
-                          @else
-                            <button  data-toggle="tooltip" data-placement="top" title="Demo Mode"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-
-                          @endif
+                         
                         
                         </div>
                         </td>

@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="title">
-            <a class="btn btn-primary btn-sm" href="{{route('admin_page.create')}}"><i class="fa fa-plus fa-lg fa-check-circle"></i>New Page</a>
+            <a class="btn btn-primary" href="{{route('admin_page.create')}}"><i class="fa fa-plus fa-lg fa-check-circle"></i>New Page</a>
             @if(Session('status'))
             <div class="text-center text-success">
             <h5>Data Deleted Sucessfully</h5></div>
@@ -55,19 +55,17 @@
                     
                         <td class="align-middle">
                           <div class="table-action">
-                          <a data-toggle="tooltip" data-placement="top" title="Edit" href="{{route('admin_page.edit',$pages->id)}}" class="btn btn-primary btn-sm tooltip-danger">
+                          <a data-toggle="tooltip" data-placement="top" title="Edit" href="{{route('admin_page.edit',$pages->id)}}" class="btn btn-primary tooltip-danger">
                             <i class="fa fa-pencil"></i>
                           </a>
-                          <a target="__" data-toggle="tooltip" data-placement="top" title="View"  href="{{URL::to('/',$pages->slug)}}" class="btn btn-success btn-sm"> <i class="fa fa-eye"></i></a>
-                          @if (env('demo_mode') != 'enabled')
+                          <a target="__" data-toggle="tooltip" data-placement="top" title="View"  href="{{URL::to('/',$pages->slug)}}" class="btn btn-success"> <i class="fa fa-eye"></i></a>
+                   
                           <form action="{{route('admin_page.destroy',$pages->id)}}" method="post" class="d-inline">
                             @method('DELETE')
                             @csrf
-                          <button onclick="return window.confirm('are you sure want to delete')" data-toggle="tooltip" data-placement="top" title="Delete"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                          <button onclick="return window.confirm('are you sure want to delete')" data-toggle="tooltip" data-placement="top" title="Delete"  class="btn btn-danger"><i class="fa fa-trash"></i></button>
                           </form>
-                          @else
-                          <button  data-toggle="tooltip" data-placement="top" title="Demo Mode"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                          @endif
+                        
                         
                         </div>
                         </td>
