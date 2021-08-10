@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\page;
 use backend\CustomUserController;
 use backend\UserRoleController;
 use App\Http\Controllers\backend\BackendController;
@@ -24,10 +23,11 @@ use backend\SettingController;
 Auth::routes(['register' => true]);
 
 Route::get('/', function(){
-        return redirect(route('login'));
+   return redirect(route('login'));
 });
 
-Route::get('/home', [BackendController::class, 'index'])->name('home');
+Route::get('/home', [BackendController::class, 'index'])->name('home')->middleware('admin');
+
 Route::get('/get_chartinfo', [BackendController::class, 'get_chartinfo']);
 
 // Custom User Managment.
@@ -47,7 +47,7 @@ Route::get('email_active/{id}', [NewsleterController::class, 'active']);
 Route::resource('/newsletter', 'backend\NewsleterController');
 
 // Admin Settings.
-Route::resource('admin_settings', SettingController::class);
+Route::resource('admin_settings', SettingController::class)->middleware('admin');
 
 // Customer Portal
 Route::resource('customer-portal', 'backend\CustomerPortal');
