@@ -39,14 +39,14 @@
                    <?php $option_list = explode(',', $edit->show_option); ?>
                       <tbody>
                        <div class="row">
-                          @foreach($admin_menu_list as $key)
+                          @foreach($admin_menu_list as $key => $value)
                              <div class="form-check col-md-3 m-3">
                                <label class="form-check-label">
                                <input class="form-check-input" value="{{$key}}" type="checkbox" name="show_option[]"
                                <?php if(in_array($key, $option_list)){
                                  echo "checked";
                                 } ?>
-                               >{{$key}}
+                               >{{$value}}
                              
                             </label>
                             </div>

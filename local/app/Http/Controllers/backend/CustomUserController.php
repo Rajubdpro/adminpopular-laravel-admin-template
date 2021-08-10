@@ -86,7 +86,7 @@ class CustomUserController extends Controller
      */
     public function show($id)
     {  
-        $show = user::with('relational_user_role')->find($id);
+        $show = user::with('role')->find($id);
         return view('backend.user.show', compact('show'));
     }
 

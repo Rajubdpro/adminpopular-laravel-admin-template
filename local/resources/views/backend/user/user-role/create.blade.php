@@ -36,10 +36,10 @@
                    <table class="table table-bordered">
                       <tbody>
                         <div class="row">
-                          @foreach($admin_menu_list as $key)
+                          @foreach($admin_menu_list as $key => $value)
                              <div class="form-check col-md-3 m-3">
                                <label class="form-check-label">
-                               <input class="form-check-input" value="{{$key}}" type="checkbox" name="show_option[]">{{$key}}
+                               <input class="form-check-input" value="{{$key}}" type="checkbox" name="show_option[]">{{$value}}
                             </label>
                             </div>
                           @endforeach

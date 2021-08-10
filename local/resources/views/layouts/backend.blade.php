@@ -204,8 +204,7 @@
                     </li>
                     <li>
                         <a href="#" class="adminpopular-material-button adminpopular-submenu-toggle">
-                            <span class="adminpopular-user-avatar"><img alt="" src="{{asset('local/public/contents/backend')}}/images/pic.jpg" width="32"
-                                    height="32" /></span>
+                            <span class="adminpopular-user-avatar"><img alt="" src="{{asset('local/public/contents/backend')}}/images/pic.jpg" width="32" height="32" /></span>
                         </a>
                         <div class="adminpopular-header-submenu">
                             <ul>
@@ -259,13 +258,14 @@
              <?php $loginid = Auth::id(); 
               $get_user = user::find($loginid);
 
-              if(isset($get_user->relational_user_role)){
-              $get_menu_option = $get_user->relational_user_role->show_option; 
+              if(isset($get_user->role)){
+              $get_menu_option = $get_user->role->show_option; 
+              
               $stringToArray = explode(',', $get_menu_option);
                 
               ?>
               
-            @if(in_array('Dashboard', $stringToArray))
+            @if(in_array('dashboard', $stringToArray))
             <li>
                 <a class="nav-item {{ (request()->is('home')) ? 'active' : '' }}" href="{{route('home')}}">
                     <i class="nav-icon fa fa-dashboard"></i>
@@ -274,7 +274,16 @@
             </li>
             @endif
 
-            @if(in_array('User', $stringToArray))
+            @if(in_array('customer-portal', $stringToArray))
+            <li>
+                <a class="nav-item {{ (request()->is('customer-portal')) ? 'active' : '' }}" href="{{route('customer-portal.index')}}">
+                    <i class="nav-icon fa fa-dashboard"></i>
+                    <span class="nav-label">Customer Portal</span>
+                </a>
+            </li>
+            @endif
+
+            @if(in_array('user', $stringToArray))
             <li>
                 <a class="nav-item {{ (request()->is('custom-user')) ? 'active' : '' }}" href="{{route('custom-user.index')}}">
                     <i class="nav-icon fa fa-user"></i>
@@ -283,7 +292,7 @@
             </li>
             @endif
           
-            @if(in_array('Page', $stringToArray))
+            @if(in_array('page', $stringToArray))
             <li>
                 <a class="nav-item {{ (request()->is('admin_page')) ? 'active' : '' }}" href="{{route('admin_page.index')}}">
                     <i class="nav-icon fa fa-book"></i>
@@ -292,7 +301,7 @@
             </li>
             @endif
 
-            @if(in_array('Newsletter', $stringToArray))
+            @if(in_array('newsletter', $stringToArray))
             <li>
                 <a class="nav-item {{ (request()->is('newsletter')) ? 'active' : '' }}" href="{{route('newsletter.index')}}">
                     <i class="nav-icon fa fa-envelope"></i>
@@ -301,7 +310,7 @@
             </li>
             @endif
 
-            @if(in_array('Settings', $stringToArray))
+            @if(in_array('settings', $stringToArray))
             <li>
                 <a class="nav-item {{ (request()->is('admin_settings')) ? 'active' : '' }}" href="{{route('admin_settings.index')}}">
                     <i class="nav-icon fa fa-cog"></i>

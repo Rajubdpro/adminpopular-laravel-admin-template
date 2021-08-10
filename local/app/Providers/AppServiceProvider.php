@@ -27,14 +27,15 @@ class AppServiceProvider extends ServiceProvider
       $settinginfo = setting::first();
       View::share('settinginfo',$settinginfo);
 
-
-        $admin_menu_list = array(
-        'Dashboard',
-        'User',
-        'Page',
-        'Newsletter',
-        'Settings',
-        );
+      $admin_menu_list = [
+        'dashboard' => 'Dashboard',
+        'customer-portal' => 'Customer Portal',
+        'user' => 'User',
+        'page' => 'Page',
+        'newsletter' => 'Newsletter',
+        'settings' => 'Settings',
+      ];
+      
        View::share( 'admin_menu_list', $admin_menu_list);
       
     }

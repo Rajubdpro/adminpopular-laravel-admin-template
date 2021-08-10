@@ -34,8 +34,8 @@
                    <tr>
                     <th scope="col">User Role</th>
                     <th scope="col">
-                      @if($show->relational_user_role)
-                      {{$show->relational_user_role->role_name}}
+                      @if($show->role)
+                      {{$show->role->role_name}}
                       @endif
                     </th>
                   </tr>

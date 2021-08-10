@@ -48,3 +48,6 @@ Route::resource('/newsletter', 'backend\NewsleterController');
 
 // Admin Settings.
 Route::resource('admin_settings', SettingController::class);
+
+// Customer Portal
+Route::resource('customer-portal', 'backend\CustomerPortal');
