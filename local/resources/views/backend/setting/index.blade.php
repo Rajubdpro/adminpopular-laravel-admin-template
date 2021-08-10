@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 @section('contents')
 @push('page-style')
-<link rel="stylesheet" type="text/css" href="{{asset('local/public/contents/frontend/assets/css/iziToast.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('local/public/contents/frontend/css/iziToast.min.css')}}">
 @endpush
 
 <div class="title container">
@@ -109,12 +109,7 @@
         </div>
         <br>
         <br>
-        @if (env('demo_mode')!='enabled')
         <button type="submit" class="btn btn-primary">Submit</button>
-        @else
-        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title=" Currently Demo Mode"> Submit
-        </button>
-        @endif
         <br>
         <br>
 
@@ -125,7 +120,7 @@
 </div>
 
 @push('page-script')
-<script src="{{asset('local/public/contents/frontend/assets/js/iziToast.min.js')}}"></script>
+<script src="{{asset('local/public/contents/frontend/js/iziToast.min.js')}}"></script>
 @if(Session('success'))
 <script type="text/javascript">
     "use strict";

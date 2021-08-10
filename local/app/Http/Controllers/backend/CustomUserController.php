@@ -11,18 +11,11 @@ use Image;
 use App\user_role;
 class CustomUserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function __construct(){
-        $this->middleware('auth');
-    }
+
     public function index()
     {
        $getusers = user::get();
-       return view('backend.user.index',compact('getusers'));
+       return view('backend.user.index', compact('getusers'));
     }
 
     /**

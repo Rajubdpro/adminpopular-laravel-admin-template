@@ -39,4 +39,10 @@ class Helpers extends Model
     }
 
 
+    public static function get_current_user_id(){
+        $loginid = Auth::id();
+        return $loginid;
+    }
+
+
 }
