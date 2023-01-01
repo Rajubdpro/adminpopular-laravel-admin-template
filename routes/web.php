@@ -16,7 +16,7 @@ use backend\UserRoleController;
 use App\Http\Controllers\backend\BackendController;
 use App\Http\Controllers\backend\PageController;
 use App\Http\Controllers\backend\NewsleterController;
-use App\Http\Controllers\backend\SettingController;
+use backend\SettingController;
 use Illuminate\Support\Facades\Auth;
 
 
