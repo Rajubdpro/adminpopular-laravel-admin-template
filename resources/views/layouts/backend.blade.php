@@ -42,9 +42,10 @@
             <!--logo start -->
             <div class="adminpopular-logo-box">
                 <div>
-                    <a href="{{route('home')}}" class="adminpopular-logo">AdminPopular</a>
+                    <a href="{{route('home')}}" class="adminpopular-logo">{{Helpers::getAppSetitngs()->app_name}}</a>
                 </div>
             </div>
+
 
             <!--sidebar menu toggler start -->
             <div class="adminpopular-toggle-sidebar cp-wave-effect">

@@ -25,40 +25,39 @@
                 <div class="form-group">
                   <label class="control-label">Name</label>
                   <input class="form-control" type="text" placeholder="Enter full name" value="{{$edit->name}}" name="name">
-                    {{$errors}}
-                   @if ($errors->has('name'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('name')}}
+                   @error('name')
+                      <span class="text-danger">
+                        {{$message}}
                       </span>
-                    @endif
+                   @enderror
                 </div>
                 <div class="form-group">
                   <label class="control-label">Email</label>
                   <input class="form-control" type="email" placeholder="Enter email address" value="{{$edit->email}}" name="email">
-                    @if ($errors->has('email'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('email')}}
+                    @error('email')
+                    <span class="text-danger">
+                        {{$message}}
                       </span>
-                    @endif
+                    @enderror
                 </div>
                <div class="form-group">
                   <label class="control-label">Phone</label>
                   <input class="form-control" type="text" placeholder="Enter phone number" value="{{$edit->phone}}" name="phone">
-                   @if ($errors->has('phone'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('phone')}}
+                   @error('phone')
+                   <span class="text-danger">
+                        {{$message}}
                       </span>
-                    @endif
+                   @enderror
                 </div>
 
                <div class="form-group">
                   <label class="control-label">New Password</label>
                   <input class="form-control" type="password" placeholder="Enter new password" name="password" value="{{$edit->password}}">
-                   @if ($errors->has('password'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('password')}}
+                   @error('password')
+                   <span class="text-danger">
+                        {{$message}}
                       </span>
-                    @endif
+                   @enderror
                </div>
               <div class="form-group">
                   <label class="control-label">Select User Role</label>
@@ -67,6 +66,11 @@
                     <option value="{{$role->id}}" {{$edit->role_id == $role->id ? 'selected' : ''}}>{{$role->role_name}}</option>
                     @endforeach
                   </select>
+                  @error('role_id')
+                  <span class="text-danger">
+                        {{$message}}
+                      </span>
+                  @enderror
                </div>
 
                 <div class="form-group">
@@ -78,11 +82,11 @@
                    @else
                    <img src="{{asset('local/public/uploads/user')}}/no-photo.jpg" class="sm-img" width="100">
                    @endif
-                   @if ($errors->has('photo'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('photo')}}
+                    @error('photo')
+                    <span class="text-danger">
+                        {{$message}}
                       </span>
-                    @endif
+                    @enderror
                 </div>
 
                  <div class="text-center">

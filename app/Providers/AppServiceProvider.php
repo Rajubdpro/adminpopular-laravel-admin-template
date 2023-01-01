@@ -24,9 +24,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-      $settinginfo = setting::first();
-      View::share('settinginfo',$settinginfo);
-
       $admin_menu_list = [
         'dashboard' => 'Dashboard',
         'customer-portal' => 'Customer Portal',

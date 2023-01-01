@@ -24,48 +24,52 @@
                 <div class="form-group">
                   <label class="control-label">Name</label>
                   <input class="form-control" type="text" placeholder="Enter full name" value="{{old('name')}}" name="name">
-                   @if ($errors->has('name'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('name')}}
-                      </span>
-                    @endif
+                    @error('name')
+                    <span class="text-danger">
+                         {{$message}}
+                    </span>
+                    @enderror
                 </div>
                 <div class="form-group">
                   <label class="control-label">Email</label>
                   <input class="form-control" type="email" placeholder="Enter email address" value="{{old('email')}}" name="email">
-                    @if ($errors->has('email'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('email')}}
-                      </span>
-                    @endif
+                    @error('email')
+                    <span class="text-danger">
+                         {{$message}}
+                    </span>
+                    @enderror
                 </div>
                <div class="form-group">
                   <label class="control-label">Phone</label>
                   <input class="form-control" type="text" placeholder="Enter phone number" value="{{old('phone')}}" name="phone">
-                   @if ($errors->has('phone'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('phone')}}
-                      </span>
-                    @endif
+                   @error('phone')
+                   <span class="text-danger">
+                         {{$message}}
+                    </span>
+                   @enderror
                 </div>
 
                <div class="form-group">
                   <label class="control-label">New Password</label>
                   <input class="form-control" type="password" placeholder="Enter new password" name="password" value="{{old('password')}}">
-                   @if ($errors->has('password'))
-                      <span class="invalid-feedback">
-                        {{$errors->first('password')}}
-                      </span>
-                    @endif
+                   @error('password')
+                   <span class="text-danger">
+                         {{$message}}
+                    </span>
+                   @enderror
                </div>
               <div class="form-group">
                   <label class="control-label">Select User Role</label>
                   <select name="role_id" class="form-control">
-
                     @foreach($roles as $role)
                     <option value="{{$role->id}}">{{$role->role_name}}</option>
                     @endforeach
                   </select>
+                  @error('role_id')
+                  <span class="text-danger">
+                         {{$message}}
+                    </span>
+                  @enderror
                </div>
 
                 <div class="form-group">
@@ -76,9 +80,12 @@
                         {{$errors->first('photo')}}
                       </span>
                     @endif
-
+                    @error('photo')
+                    <span class="text-danger">
+                         {{$message}}
+                    </span>
+                    @enderror
                 </div>
-
 
               <div class="tile-footer text-center mt-20 mb-20">
 
