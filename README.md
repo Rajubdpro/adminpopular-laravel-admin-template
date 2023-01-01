@@ -25,11 +25,11 @@ Once the database is settup and migrations are up, run
 
 ```php artisan serve```
 
-Login as Admin  <br /> hr
+Login as Admin  <br />
 Email    : super_addmin@gmail.com  <br />
 Password : super_addmin@gmail.com  <br />
 
-Login As User  <br /> hr
+Login As User  <br />
 Email    : admin@gmail.com  <br />
 Password : admin@gmail.com  <br />
 
