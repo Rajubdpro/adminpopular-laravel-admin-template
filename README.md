@@ -25,12 +25,12 @@ Once the database is settup and migrations are up, run
 
 ```php artisan serve```
 
-Login as Admin
-Email    : super_addmin@gmail.com
-Password : super_addmin@gmail.com
+Login as Admin  <br />
+Email    : super_addmin@gmail.com  <br />
+Password : super_addmin@gmail.com  <br />
 
-Login As User
-Email    : admin@gmail.com
-Password : admin@gmail.com
+Login As User  <br />
+Email    : admin@gmail.com  <br />
+Password : admin@gmail.com  <br />
 
 and visit [http://localhost:8000/](http://localhost:8000/) to see the application in action.
