@@ -285,7 +285,7 @@
 
             @if(in_array('user', $stringToArray))
             <li>
-                <a class="nav-item {{ (request()->is('custom-user')) ? 'active' : '' }}" href="{{route('custom-user.index')}}">
+                <a class="nav-item {{ (request()->is('users')) ? 'active' : '' }}" href="{{route('users.index')}}">
                     <i class="nav-icon fa fa-user"></i>
                     <span class="nav-label">User</span>
                 </a>

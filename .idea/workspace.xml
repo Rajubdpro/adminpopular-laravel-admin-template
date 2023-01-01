@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0d62bdcb-3cdd-4c7c-9893-20b6277f14ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/CustomUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/user/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,6 +177,8 @@
       <updated>1671354773101</updated>
       <workItem from="1671354775018" duration="3350000" />
       <workItem from="1671627788833" duration="1602000" />
+      <workItem from="1672042509381" duration="1218000" />
+      <workItem from="1672563850202" duration="2228000" />
     </task>
     <servers />
   </component>

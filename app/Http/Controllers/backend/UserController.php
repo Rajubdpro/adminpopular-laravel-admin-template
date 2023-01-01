@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UpdateteUserRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Session;
@@ -35,21 +37,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateUserRequest $request)
     {
         $input_value = clean($request->all());
-        // input validation
-        $request->validate([
-            'name' => 'required|max:50',
-            'email' => 'required|unique:users,email',
-            'phone' => 'max:14|unique:users,phone',
-            'password' => 'min:8',
-            'photo' => 'mimes:jpeg,jpg,png,gif|max:2048',
-         ],[
-         'required.name' => 'Name filed is required',
 
-       ]
-       );
         // user image update
         if($request->hasFile('photo')){
            $image=$request->file('photo');
@@ -104,22 +95,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateteUserRequest $request, $id)
     {
         $update_data = user::find($id);
         $input_value = clean($request->all());
-        // input validation
-        $request->validate([
-            'name' => 'required|max:50',
-            'email' => 'required',
-            'phone' => 'max:14',
-            'password' => 'min:8',
-            'photo' => 'mimes:jpeg,jpg,png,gif|max:2048',
-         ],[
-         'required.name' => 'Name filed is required',
 
-       ]
-       );
         // user image update
         if($request->hasFile('photo')){
            $image=$request->file('photo');

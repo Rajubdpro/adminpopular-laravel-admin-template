@@ -38,6 +38,15 @@ class User extends Authenticatable
     ];
 
 
+    public static $rules = [
+        'name' => 'required|max:50',
+        'email' => 'required|unique:users,email',
+        'phone' => 'max:14|unique:users,phone',
+        'password' => 'min:8',
+        'photo' => 'mimes:jpeg,jpg,png,gif|max:2048',
+    ];
+
+
     public function role(){
         return $this->belongsTo(user_role::class, 'role_id');
     }

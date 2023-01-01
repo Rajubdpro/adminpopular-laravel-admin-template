@@ -19,12 +19,13 @@
             </div>
             @endif
             <div class="tile-body">
-              <form action="{{route('custom-user.update',$edit->id)}}" method="post" enctype="multipart/form-data">
+              <form action="{{route('users.update',$edit->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('put')
                 <div class="form-group">
                   <label class="control-label">Name</label>
                   <input class="form-control" type="text" placeholder="Enter full name" value="{{$edit->name}}" name="name">
+                    {{$errors}}
                    @if ($errors->has('name'))
                       <span class="invalid-feedback">
                         {{$errors->first('name')}}
@@ -49,7 +50,7 @@
                       </span>
                     @endif
                 </div>
-              
+
                <div class="form-group">
                   <label class="control-label">New Password</label>
                   <input class="form-control" type="password" placeholder="Enter new password" name="password" value="{{$edit->password}}">
@@ -58,20 +59,20 @@
                         {{$errors->first('password')}}
                       </span>
                     @endif
-               </div> 
+               </div>
               <div class="form-group">
                   <label class="control-label">Select User Role</label>
-                  <select name="role_id" class="form-control"> 
+                  <select name="role_id" class="form-control">
                      @foreach($roles as $role)
                     <option value="{{$role->id}}" {{$edit->role_id == $role->id ? 'selected' : ''}}>{{$role->role_name}}</option>
                     @endforeach
                   </select>
                </div>
-              
+
                 <div class="form-group">
                   <label class="control-label">Photo</label>
                   <input class="form-control" type="file" name="photo">
-                   
+
                     @if($edit->photo != null)
                    <img src="{{asset('local/public/uploads/user')}}/{{$edit->photo}}" class="sm-img" width="100">
                    @else
@@ -90,14 +91,14 @@
                    @else
                   <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title=" Currently Demo Mode"> Register</button>
                    @endif
-                   <a href="{{route('custom-user.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left fa-lg fa-check-circle"></i>Back</a>
+                   <a href="{{route('users.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left fa-lg fa-check-circle"></i>Back</a>
                 </div>
                 <br>
                 <br>
-              
+
               </form>
             </div>
-           
+
           </div>
         </div>
       </div>

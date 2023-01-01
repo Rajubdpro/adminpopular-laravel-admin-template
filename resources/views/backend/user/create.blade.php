@@ -19,7 +19,7 @@
             </div>
             @endif
             <div class="title-body">
-              <form action="{{route('custom-user.store')}}" method="post" enctype="multipart/form-data">
+              <form action="{{route('users.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                   <label class="control-label">Name</label>
@@ -48,7 +48,7 @@
                       </span>
                     @endif
                 </div>
-              
+
                <div class="form-group">
                   <label class="control-label">New Password</label>
                   <input class="form-control" type="password" placeholder="Enter new password" name="password" value="{{old('password')}}">
@@ -57,17 +57,17 @@
                         {{$errors->first('password')}}
                       </span>
                     @endif
-               </div> 
+               </div>
               <div class="form-group">
                   <label class="control-label">Select User Role</label>
-                  <select name="role_id" class="form-control"> 
+                  <select name="role_id" class="form-control">
 
                     @foreach($roles as $role)
                     <option value="{{$role->id}}">{{$role->role_name}}</option>
                     @endforeach
                   </select>
                </div>
-              
+
                 <div class="form-group">
                   <label class="control-label">Photo</label>
                   <input class="form-control" type="file" name="photo">
@@ -76,7 +76,7 @@
                         {{$errors->first('photo')}}
                       </span>
                     @endif
-                 
+
                 </div>
 
 
@@ -88,12 +88,12 @@
                   <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title=" Currently Demo Mode"> Register</button>
                 @endif
 
-                   <a href="{{route('custom-user.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left fa-lg fa-check-circle"></i>Back</a>
+                   <a href="{{route('users.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left fa-lg fa-check-circle"></i>Back</a>
                 </div>
-              
+
               </form>
             </div>
-           
+
           </div>
         </div>
       </div>

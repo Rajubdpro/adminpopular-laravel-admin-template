@@ -11,10 +11,10 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <a class="btn btn-primary mb-2" href="{{route('custom-user.create')}}"><i class="fa fa-plus"></i>Add New</a>
+    <a class="btn btn-primary mb-2" href="{{route('users.create')}}"><i class="fa fa-plus"></i>Add New</a>
     @if(Session('status'))
     <div class="text-center text-success">
-      <h5>Data Deleted Sucessfully</h5>
+      <h5>Data Deleted Successfully</h5>
     </div>
     @endif
     <div class="table-responsive title">
@@ -49,13 +49,13 @@
             <td class="align-middle">
 
               <div class="table-action">
-                <a data-toggle="tooltip" data-placement="top" title="Edit" href="{{route('custom-user.edit',$getuser->id)}}" class="btn btn-primary tooltip-danger">
+                <a data-toggle="tooltip" data-placement="top" title="Edit" href="{{route('users.edit',$getuser->id)}}" class="btn btn-primary tooltip-danger">
                   <i class="fa fa-pencil"></i>
                 </a>
-                <a data-toggle="tooltip" data-placement="top" title="View" href="{{route('custom-user.show',$getuser->id)}}" class="btn btn-success"> <i class="fa fa-eye"></i></a>
+                <a data-toggle="tooltip" data-placement="top" title="View" href="{{route('users.show',$getuser->id)}}" class="btn btn-success"> <i class="fa fa-eye"></i></a>
 
                 @if($getuser->id !=1 && $getuser->id !=2)
-                <form action="{{route('custom-user.destroy',$getuser->id)}}" method="post" class="d-inline">
+                <form action="{{route('users.destroy',$getuser->id)}}" method="post" class="d-inline">
                   @method('DELETE')
                   @csrf
                   <button onclick="return window.confirm('are you sure want to delete')" data-toggle="tooltip" data-placement="top" title="Delete" class="btn btn-danger"><i class="fa fa-trash"></i></button>

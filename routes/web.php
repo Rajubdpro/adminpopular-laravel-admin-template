@@ -35,7 +35,7 @@ Route::get('/home', [BackendController::class, 'index'])->name('home')->middlewa
 Route::get('/get_chartinfo', [BackendController::class, 'get_chartinfo']);
 
 // Custom User Managment.
-Route::resource('/custom-user', UserController::class);
+Route::resource('/users', UserController::class);
 
 // User Role Managment.
 Route::resource('/user-role', UserRoleController::class);

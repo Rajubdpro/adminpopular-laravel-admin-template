@@ -15,14 +15,14 @@
                   </tr>
                    <tr>
                     <th class="align-middle" scope="col">Photo</th>
-                    <th scope="col" > 
+                    <th scope="col" >
                         @if($show->photo != NULL)
                          <img src="{{asset('local/public/uploads/user/')}}/{{$show->photo}}" class="xm-img" width="120">
                         @else
                         <img src="{{asset('local/public/uploads/user/no-photo.jpg')}}" class="xm-img" width="120">
                         @endif
                     </th>
-                  </tr> 
+                  </tr>
                    <tr>
                     <th scope="col">Email</th>
                     <th scope="col">{{$show->email}}</th>
@@ -42,10 +42,10 @@
                 </thead>
               </table>
                 <div class="text-center">
-                <a href="{{route('custom-user.index')}}" class="btn btn-info"><i class="fa fa-arrow-left"></i>Back</a>
+                <a href="{{route('users.index')}}" class="btn btn-info"><i class="fa fa-arrow-left"></i>Back</a>
               </div>
             </div>
-           
+
           </div>
         </div>
       </div>
